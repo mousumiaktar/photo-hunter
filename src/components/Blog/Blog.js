@@ -4,7 +4,7 @@ import './Blog.css';
 const Blog = () => {
     return (
         <div className='container'>
-            <h2>Difference between authorization and authentication</h2>
+            <h2>1. Difference between authorization and authentication</h2>
             <div className='blog-container'>
                 <div>
                     <h3>Authentication</h3>
@@ -40,6 +40,14 @@ const Blog = () => {
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div>
+                <h2>2. Why are you using firebase? What other options do you have to implement authentication?</h2>
+                <p>I'm using Firebase Authentication to allow users to sign in to my app using one or more sign-in methods, including email address and password sign-in, and federated identity providers such as Google Sign-in and Facebook Login.Firebase Authentication makes it easier to get our users signed-in without having to understand the complexities behind implementing your own authentication system.Usually, authentication by a server entails the use of a user name and password. Other ways to authenticate can be through cards, retina scans, voice recognition, and fingerprints.</p>
+            </div>
+            <div>
+                <h2>3. What other services does firebase provide other than authentication?</h2>
+                <p></p>
             </div>
         </div>
     );
