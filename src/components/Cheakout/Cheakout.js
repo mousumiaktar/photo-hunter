@@ -37,13 +37,13 @@ const Cheakout = () => {
             <div className="register-form">
           <h5 className='mb-4'>Want to book? Fill up the Form </h5>
           <form onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Enter Your Name" />
+            <input type="text" name="name" placeholder="Enter Your Name" /><br />
 
-            <input onBlur={handleEmail} type="email" name="email" id="" placeholder="Enter Your Email" required />
+            <input onBlur={handleEmail} type="email" name="email" id="" placeholder="Enter Your Email" required /> 
 
             <input onBlur={handleAddress} type="address" name="address" id="" placeholder="Enter Your address" required />
 
-            <input onBlur={handlePhone} type="phone" name="phone" id="" placeholder="Enter Your phone number" required />
+            <input onBlur={handlePhone} type="phone" name="phone" id="" placeholder="Enter Your phone number" required /> <br /> <br />
 
             <input type="submit" value="submit" />
           </form>

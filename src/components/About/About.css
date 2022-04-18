@@ -12,4 +12,9 @@
     width: auto;
     border-radius: 100%;
 }
+@media screen and (max-width: 600px){
+    .about-container{
+        display:block;
+    }
+}
 
