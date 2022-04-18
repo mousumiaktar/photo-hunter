@@ -1,11 +1,13 @@
 import React from 'react';
-import banner from '../../images/banner/weddingbanner.jpg';
+import banner from '../../images/banner/banner.png';
 import Services from '../Services/Services';
+import './Home.css';
+
 
 const Home = () => {
     return (
         <div>
-            <div>
+            <div className='img-container'>
             <img src={banner} alt="" />
             </div>
             <div>

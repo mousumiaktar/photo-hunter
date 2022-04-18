@@ -11,32 +11,29 @@ const Service = ({ service }) => {
 
     const [user] = useAuthState(auth);
 
-    const handleButtonNavigate = () =>{
-        if(user){
+    const handleButtonNavigate = () => {
+        if (user) {
             navigate('/cheakout');
         }
-        else{
+        else {
             navigate('/login');
         }
-        
+
     }
 
     return (
-        <div>
-            <Card>
-                <Card.Img variant="top" src={picture} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        {description} <br />
-                        <small>price: {price}</small>
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                    <button onClick={handleButtonNavigate}>Click here </button>
-                </Card.Footer>
-            </Card>
-
+        <div className='container'>
+            <div className='container-area'>
+                <div className='container-info'>
+                <img src={picture} alt="" />
+            </div>
+                <div className='container-text'>
+                    <h4>{name}</h4>
+                    <p>price: {price}</p>
+                    <p>{description}</p>
+                </div>
+                <button className='multiple-button' onClick={handleButtonNavigate}>Click here </button>
+                </div>
         </div>
     );
 };

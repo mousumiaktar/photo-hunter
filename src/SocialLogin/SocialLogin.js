@@ -1,11 +1,11 @@
 import React from 'react';
 import googleicon from '../images/social-icon/google.png';
 import githubicon from '../images/social-icon/Github.png';
-import facebookicon from '../images/social-icon/facebook.png';
 import './SocialLogin.css';
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../components/Loading/Loading';
 
 
 const SocialLogin = () => {
@@ -15,6 +15,10 @@ const SocialLogin = () => {
 
     const navigate = useNavigate();
     let errorItem;
+
+    if(loading || loading1){
+        return <Loading></Loading>
+    }
 
     if (error || error1) {
         errorItem=<p className='text-danger'>Error: {error?.message} {error1?.message}</p>  

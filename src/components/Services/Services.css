@@ -2,11 +2,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
+    
 }
 .container h2{
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
-    color: rgb(61, 221, 226);
+    color: rgb(92, 70, 16);
+    font-size: 50px;
     text-shadow: 2px 2px 4px #000000; ;
 }
