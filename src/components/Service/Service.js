@@ -1,39 +1,29 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
-import auth from '../../firebase.init';
+import { Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({ service }) => {
-    const { name, picture, description, price } = service;
-    const navigate = useNavigate();
-
-    const [user] = useAuthState(auth);
-
-    const handleButtonNavigate = () => {
-        if (user) {
-            navigate('/cheakout');
-        }
-        else {
-            navigate('/login');
-        }
-
-    }
+    const { name, id, picture, description, price } = service;
 
     return (
-        <div className='container'>
-            <div className='container-area'>
-                <div className='container-info'>
-                <img src={picture} alt="" />
-            </div>
-                <div className='container-text'>
-                    <h4>{name}</h4>
-                    <p>price: {price}</p>
-                    <p>{description}</p>
-                </div>
-                <button className='multiple-button' onClick={handleButtonNavigate}>Click here </button>
-                </div>
+
+        <div>
+            <CardGroup>
+                <Card>
+                    <Card.Img variant="top" src={picture}/>
+                    <Card.Body>
+                        <Card.Title>{name}</Card.Title>
+                        <h5>price: ${price}</h5>
+                        <Card.Text>
+                            {description}
+                        </Card.Text>
+                    </Card.Body>        
+                    <Card.Footer>
+                    <Link to={'/cheakout/' + id}><button className='rounded'>Show Details</button></Link>
+                    </Card.Footer>
+                </Card>
+            </CardGroup>
         </div>
     );
 };

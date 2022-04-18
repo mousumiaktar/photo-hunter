@@ -1,6 +1,7 @@
 import React from 'react';
 import banner from '../../images/banner/banner.png';
 import Services from '../Services/Services';
+import Singlepage from '../Singlepage/Singlepage';
 import './Home.css';
 
 
@@ -11,6 +12,7 @@ const Home = () => {
             <img src={banner} alt="" />
             </div>
             <div>
+                <Singlepage></Singlepage>
                <Services></Services>
             </div>
         </div>
