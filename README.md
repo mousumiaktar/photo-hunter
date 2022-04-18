@@ -4,6 +4,6 @@
 * For Desiging React Bootstrap and custom css have used.
 * Authentication has implemented.
 * This site is about an independence service provider.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Photo Hunter
+(https://github.com/facebook/create-react-app).
 
